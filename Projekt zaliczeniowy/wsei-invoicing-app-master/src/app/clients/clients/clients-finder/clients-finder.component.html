@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>
+    Find Move!
+  </h1>
+  <input (input)="searchMove($event)" />
+  <div class="move-list">
+    <ul *ngFor="let move of moveList">
+      <li (click)=addMoveToLocalStorage(move.title)>{{ move.title }}</li>
+    </ul>
+  </div>
+</div>
